@@ -120,24 +120,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
-export LD_LIBRARY_PATH=.:/usr/local/cuda/lib64/:$HOME/intel/lib/intel64:$HOME/intel/mkl/lib/intel64:$HOME/tools/TensorRT-6.0.1.5/lib/:$HOME/tools/libconfig-1.7.2/lib/.libs/:$LD_LIBRARY_PATH
-export PATH=$HOME/tools/pycharm-community-2019.2.3/bin:~/scripts:$HOME/tools/node-v12.14.1-linux-x64/bin:$PATH
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/:$HOME/tools/TensorRT-8.4.3.1/lib/
+export PATH=$PATH:/ap/users/eltonz/tools/ngc-cli
 export PYTHONIOENCODING=utf8
 export LANG="en_US.UTF-8"
-export TORCH_CUDA_ARCH_LIST="7.0 7.5 8.0 8.6+PTX"
-
-source ~/intel/bin/iccvars.sh -arch intel64 -platform linux
-sudo update-alternatives --set editor /usr/bin/vim.basic
-
-#cd ~/git/sr_internal/conv_cudnn
