@@ -9,6 +9,7 @@ sudo service sshd restart
 cp .inputrc ~
 cp .bash_aliases ~
 cp .bashrc ~
+cp .bash_profile ~
 
 # vi plugins
 tar -xzvf vim_small.tgz -C ~
