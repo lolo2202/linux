@@ -67,6 +67,7 @@ else
     PS1='[\t \w]\$ '
 fi
 
+PS1="\[\033[32m\]\u@\h\[\033[m\] \[\033[33m\]\w\[\033[m\]\$ "
 unset color_prompt force_color_prompt
 
 # enable color support of ls and also add handy aliases
