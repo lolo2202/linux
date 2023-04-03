@@ -39,3 +39,6 @@ sudo chmod -R 755 /usr/local/cuda/
 # update git configs
 git config --global user.email "eltonz@microsoft.com"
 git config --global user.name "Elton Zheng"
+
+# add to docker group
+sudo usermod -aG docker eltonz
